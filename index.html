@@ -5,9 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Plinten eindelijk af | Stunten met Plinten</title>
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<meta name="description" content="Nieuwe vloer, kale randen? Kies je MDF-plint en vraag je complete offerte aan. Stunten met Plinten levert, legt en kit je plinten, door heel Nederland.">
+<meta name="theme-color" content="#112337">
+<link rel="icon" href="img/logo-88.webp" type="image/webp">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/questrial-latin.woff2" crossorigin>
 <style>
-:root{--accent:#cd7112;--slate:#4c6971;--ink:#112337;--orange:#cd7112;--green:#33b909;--soft:#f6f7f8;--grey:#585e6a;--line:#e6e9ec}
+@font-face{font-family:Questrial;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/questrial-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--accent:#ad5d0d;--slate:#4c6971;--ink:#112337;--orange:#ad5d0d;--green:#33b909;--soft:#f6f7f8;--grey:#585e6a;--line:#e6e9ec}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Questrial,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff;font-size:16px}
 img{max-width:100%;display:block}
@@ -19,9 +24,10 @@ header.top{display:flex;align-items:center;justify-content:space-between;padding
 header.top img{height:44px}
 header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
 /* hero */
-.hero{position:relative;color:#fff;min-height:400px;display:flex;align-items:center;background:#223 url(img/peter-aan-het-werk.jpg) center/cover}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,35,55,.86) 0%,rgba(17,35,55,.65) 55%,rgba(17,35,55,.3) 100%)}
-.hero .wrap{position:relative;width:100%;padding-top:44px;padding-bottom:44px}
+.hero{position:relative;color:#fff;min-height:400px;display:flex;align-items:center;background:#223;overflow:hidden}
+.hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(17,35,55,.86) 0%,rgba(17,35,55,.65) 55%,rgba(17,35,55,.3) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:44px;padding-bottom:44px}
 .tag{display:inline-block;font-size:13px;letter-spacing:.4px;margin-bottom:10px;opacity:.85;text-transform:uppercase}
 .hero h1{font-size:clamp(26px,3.4vw,38px);line-height:1.18;max-width:600px;font-weight:700}
 .hero p.sub{font-size:17px;max-width:520px;margin:12px 0 20px;opacity:.92}
@@ -72,7 +78,7 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .revhead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
 .gsum{display:flex;gap:10px;align-items:center;font-size:14px;color:#3c4043}
 .gsum .big{font-size:22px;font-weight:700;color:#202124}.gsum .cnt{color:#70757a}
-.st{color:#fbbc04;letter-spacing:1px;font-size:14px}.st .off{color:#dadce0}
+.st{display:inline-block;vertical-align:-2px}
 .gbtn{border:1px solid #dadce0;border-radius:4px;padding:9px 14px;color:#1a73e8;font-weight:700;font-size:14px;text-decoration:none;background:#fff}
 .revs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;list-style:none;padding:0 0 10px;margin:0}
 .rev{flex:0 0 300px;scroll-snap-align:start;border:1px solid #dadce0;border-radius:8px;padding:14px 16px;background:#fff;font-family:Arial,sans-serif;color:#202124}
@@ -98,13 +104,13 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .final p{font-size:16px;margin-bottom:18px;color:var(--grey)}
 .final .ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .final .btn.w{border:1px solid var(--line)}
-footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
+footer{text-align:center;font-size:12px;color:#5f6368;padding:18px 20px 80px}
 .bar{display:none}
 @media(max-width:860px){
  .list,.tiles{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.rev{flex-basis:82%}
  .steps{gap:14px}
  .eric{grid-template-columns:1fr;gap:20px}.photo{max-width:200px}.photo-eric{width:180px;height:180px}
- .hero{min-height:0;background-position:70% center}
+ .hero{min-height:0}.hero .hbg{object-position:70% center}
  .hero:before{background:linear-gradient(180deg,rgba(17,35,55,.75),rgba(17,35,55,.88))}
  .hero .wrap{padding-top:36px;padding-bottom:36px}
  .price img{width:100%}
@@ -133,10 +139,11 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 <body>
 <div class="concept">CONCEPT — niet live · preview landingspagina Google Ads</div>
 <header class="top">
-  <img src="img/LOGO-2006-300x288.png" alt="Stunten met Plinten, sinds 2006">
+  <img src="img/logo-88.webp" width="46" height="44" alt="Stunten met Plinten, sinds 2006">
 </header>
 
 <section class="hero">
+  <img class="hbg" src="img/hero-1600.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="100vw" width="1600" height="877" alt="" fetchpriority="high" decoding="async">
   <div class="wrap">
     <span class="tag">Vloer erin. Plinten nog niet.</span>
     <h1>Nieuwe vloer, kale randen? Binnen een week liggen je plinten erin.</h1>
@@ -225,59 +232,59 @@ d.addEventListener('click',()=>d.close());})();
 <section class="sec">
   <div class="wrap">
     <div class="revhead">
-      <div class="gsum"><svg class="g" viewBox="0 0 48 48" width="28" height="28" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg><div><b>Google-reviews</b><br><span class="big">4,9</span> <span class="st" aria-hidden="true">★★★★★</span> <span class="cnt">551 reviews</span></div></div>
+      <div class="gsum"><svg class="g" viewBox="0 0 48 48" width="28" height="28" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg><div><b>Google-reviews</b><br><span class="big">4,9</span> <svg class="st" aria-hidden="true" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg> <span class="cnt">551 reviews</span></div></div>
       <a class="gbtn" href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" data-cta="google-reviews">Bekijk alle reviews op Google</a>
     </div>
     <ul class="revs" aria-label="Recente Google-reviews, scroll horizontaal">
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/judith-postmus.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Judith Postmus</div><time datetime="2026-10-25">25 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Goede communicatie, nette service en afspraken nagekomen! Zeker aanbevolen!</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/rob-van-marle.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Rob van Marle</div><time datetime="2026-10-21">21 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="4 van 5 sterren">★★★★<span class="off">★</span></span>
+        <svg class="st" role="img" aria-label="4 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#dadce0" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>De monteurs zijn klantvriendelijk en hebben gedegen werk afgeleverd.
 Zeer tevreden</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/jan-pieter-schaap.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">jan pieter schaap</div><time datetime="2026-10-19">19 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="4 van 5 sterren">★★★★<span class="off">★</span></span>
+        <svg class="st" role="img" aria-label="4 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#dadce0" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Prima geholpen! Peter en Eric hebben goed werk afgeleverd.</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/jeffrey-steevens.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Jeffrey Steevens</div><time datetime="2026-10-14">14 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Goed en snel geplaatst. Mannen denken fijn mee. Vriendelijk in contact. Onze muur een stuk mooier geworden met de sierlijsten, bedankt!</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/gerard-visser.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Gerard Visser</div><time datetime="2026-10-07">7 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Deze mannen hebben puik werk geleverd! Ze werken snel en zorgvuldig, zijn uitermate vakkundig en erg prettig in de omgang. Service staat hoog in 't vaandel; ze komen nog een keer terug om één ontbrekende kroonlijst te monteren. Kortom: een aanrader!</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/hans-puttenstein.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Hans Puttenstein</div><time datetime="2026-09-30">30 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Peter &amp; Eric werken snel en efficiënt, denken mee en komen afspraken na. En dat voor een prima en scherpe prijsstelling. Stunten met plinten is zondermeer aan te bevelen 👍👌</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/astrid-maas.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Astrid Maas</div><time datetime="2026-09-24">24 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Heel blij met de plinten die door onze hele woning zijn geplaatst. Prettige communicatie, denken met je mee, vlot en vakkundig gelegd.  Absoluut een aanrader.</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/daphne-hoogland.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Daphne Hoogland</div><time datetime="2026-09-21">21 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Snelle reactie bij de offerte aanvraag. Eric is een fijn persoon om mee te communiceren en het plaatsten van de plinten erg mooi. Ik ben super blij met het eind resultaat! Bedankt.</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/dave-h.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Dave H</div><time datetime="2026-09-13">13 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Aardige gast Eric en mooi alle plinten gelegd. Mijn woonkamer zit vol met hoeken en deze zijn allemaal mooi gelegd! Erg blij mee :)</p>
       </li>
       <li class="rev">
         <div class="rh"><img class="av" src="img/reviews/eleonore-lamberty.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Eleonore Lamberty</div><time datetime="2026-09-11">11 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
-        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <svg class="st" role="img" aria-label="5 van 5 sterren" viewBox="0 0 120 24" width="80" height="16"><path transform="translate(0 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(24 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(48 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(72 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/><path transform="translate(96 0)" fill="#fbbc04" d="M12 2l3 6.5 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.2l7-.7z"/></svg>
         <p>Mooi op tijd, snel gewerkt. Heel aardig en een prachtig resultaat!</p>
       </li>
     </ul>
@@ -301,5 +308,18 @@ Zeer tevreden</p>
 <nav class="bar" style="grid-template-columns:1fr">
   <a href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=bar" style="background:var(--orange)" data-cta="mdf">Kies je plint en vraag je offerte aan</a>
 </nav>
+<script>
+/* Meetcode licht laden: GA4/Google Ads pas na eerste interactie of als de browser idle is. Vul de ID's in. */
+window.SMP_TAGS={ga4:'',ads:''};
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());
+(function(){var T=window.SMP_TAGS,done=false,ids=[T.ga4,T.ads].filter(Boolean);
+ids.forEach(function(id){gtag('config',id)});
+function load(){if(done||!ids.length)return;done=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ids[0];document.head.appendChild(s)}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,load,{once:true,passive:true})});
+addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(load,{timeout:4000})});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cta]');if(a)gtag('event','cta_click',{cta:a.dataset.cta,link_url:a.href,transport_type:'beacon'})});
+})();
+</script>
 </body>
 </html>
