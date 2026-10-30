@@ -81,12 +81,17 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .nm{font-weight:700;font-size:14px}.rh time{font-size:12px;color:#70757a}
 .rev p{font-size:14px;line-height:1.5;margin:6px 0 0;white-space:pre-line}
 .revnote{font-size:13px;color:#70757a;margin-top:8px}.revnote a{color:#1a73e8}
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
-.steps div{padding-left:40px;position:relative}
-.steps div:before{counter-increment:s;content:counter(s);position:absolute;top:2px;left:0;border:1px solid var(--slate);color:var(--slate);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+/* zo werkt het */
+.how{background:var(--soft)}
+.howsub{color:var(--grey);max-width:680px;margin:-6px 0 18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s;list-style:none;padding:0;margin:0 0 20px}
+.steps li{padding-left:40px;position:relative}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;background:var(--slate);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.steps li.last:before{background:var(--orange)}
 .steps h3{margin:0 0 4px;font-size:17px}
 .steps p{color:var(--grey);font-size:15px}
+.how .ctas{display:flex;flex-wrap:wrap}
+.advies{font-size:14px;color:var(--grey);margin-top:14px;max-width:680px}.advies a{color:var(--ink);font-weight:700}
 /* final */
 .final{background:var(--soft);border-top:1px solid var(--line);text-align:center;padding:44px 0}
 .final h2{font-size:clamp(22px,2.4vw,28px);margin-bottom:6px}
@@ -120,7 +125,7 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
  .tiles{grid-template-columns:1fr 1fr;gap:12px}.tiles h3{font-size:15px}.tiles p{font-size:13px}
  .pgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -20px;padding:0 20px}
  .pgrid figure{flex:0 0 88%;scroll-snap-align:center}
- .steps div{padding-left:34px}.steps p{font-size:14px}
+ .steps li{padding-left:34px}.steps{gap:12px}.howsub{font-size:15px;margin-bottom:12px}.steps p{font-size:14px}
  .rev{flex-basis:86%}
 }
 </style>
@@ -129,7 +134,6 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 <div class="concept">CONCEPT — niet live · preview landingspagina Google Ads</div>
 <header class="top">
   <img src="img/LOGO-2006-300x288.png" alt="Stunten met Plinten, sinds 2006">
-  <a class="tel" href="tel:+31652361118">06 52 36 11 18</a>
 </header>
 
 <section class="hero">
@@ -138,9 +142,9 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
     <h1>Nieuwe vloer, kale randen? Binnen een week liggen je plinten erin.</h1>
     <p class="sub">Strakke MDF-plinten, vakkundig gelegd. Wij leveren, leggen en kitten, door heel Nederland en zonder voorrijkosten. <span class="dm">Dan is je verbouwing eindelijk echt af.</span></p>
     <div class="ctas">
-      <a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=hero" data-cta="mdf">Bekijk de MDF-plinten →</a>
+      <a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=hero" data-cta="mdf">Kies je plint en vraag je offerte aan →</a>
     </div>
-    <p class="alt">Liever eerst overleggen? <a href="#offerte" data-cta="offerte">Offerte aanvragen</a> · <a href="https://wa.me/31652361118?text=Hoi%20Eric%2C%20mijn%20vloer%20ligt%20erin%2C%20nu%20de%20plinten%20nog%E2%80%A6" data-cta="whatsapp">WhatsApp</a> · <a href="tel:+31652361118" data-cta="bellen">06 52 36 11 18</a></p>
+    <p class="alt">Weet je nog niet wat je wilt? <a href="https://stuntenmetplinten.nl/advies-aan-huis/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=hero" data-cta="advies">Advies aan huis</a></p>
     <small><span class="stars">★★★★★</span> 4,9 uit 551 Google-reviews · sinds 2006</small>
   </div>
 </section>
@@ -155,6 +159,21 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
       <div><b>4.</b>Je zwager zou ze komen leggen. Je zwager komt niet.</div>
     </div>
     <p class="punch">Wij maken de wereld niet in één keer beter.<br><em>Wel één kale rand tegelijk.</em></p>
+  </div>
+</section>
+
+<section class="sec how" id="zo-werkt-het">
+  <div class="wrap">
+    <h2>Zo werkt het</h2>
+    <p class="howsub">Je kiest zelf je plint op de site. Het offerteformulier vraagt stap voor stap alles wat nodig is. Er hoeft niemand eerst langs te komen.</p>
+    <ol class="steps">
+      <li><h3>Kies je plint</h3><p>Model, formaat en kleur. Bijvoorbeeld de moderne MDF-plint in RAL 9010.</p></li>
+      <li><h3>Vul je meters in</h3><p>Loop langs je muren: elke stap is ongeveer een meter. Zaagverlies nemen we zelf mee.</p></li>
+      <li><h3>Kies je extra's</h3><p>Bijvoorbeeld de vloerzijde laten kitten. De bovenkant kitten is standaard inbegrepen. Je geeft ook je voorkeur voor de montage door.</p></li>
+      <li class="last"><h3>Ontvang je complete offerte</h3><p>Laat je gegevens en het montageadres achter. Je krijgt een complete offerte op maat: plinten, montage, afwerking, kit en btw in één prijs.</p></li>
+    </ol>
+    <div class="ctas"><a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=zo-werkt-het" data-cta="mdf">Kies je plint en vraag je offerte aan →</a></div>
+    <p class="advies">Twijfel je nog welke plint past? Kies dan voor <a href="https://stuntenmetplinten.nl/advies-aan-huis/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=zo-werkt-het" data-cta="advies">advies aan huis</a>. We bespreken je wensen en meten in. Dit kost € 125, vooraf te betalen. Komen de materiaalkosten op je factuur boven € 750, dan krijg je die € 125 gecrediteerd. Je kunt het ook als optie aanvinken in het offerteformulier.</p>
   </div>
 </section>
 
@@ -266,33 +285,21 @@ Zeer tevreden</p>
   </div>
 </section>
 
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <h2>Zo liggen ze er binnen een week</h2>
-    <div class="steps">
-      <div><h3>Loop langs je muren</h3><p>Elke stap is ongeveer een meter. Tenzij je hele korte benen hebt. Dat getal is genoeg.</p></div>
-      <div><h3>Offerte op maat</h3><p>Je hoort snel van ons en we plannen je meteen in.</p></div>
-      <div><h3>Wij leggen, jij vinkt af</h3><p>Eric en Peter komen, leggen, kitten en ruimen op. Eindelijk.</p></div>
-    </div>
-  </div>
-</section>
 
-<section class="final" id="offerte">
+<section class="final">
   <div class="wrap">
     <h2>Klaar met die kale rand langs je vloer?</h2>
     <p>Kies vandaag je MDF-plint. Dan staan wij volgende week bij je op de stoep.</p>
     <div class="ctas">
-      <a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=slot" data-cta="mdf">Bekijk de MDF-plinten →</a>
+      <a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=slot" data-cta="mdf">Kies je plint en vraag je offerte aan →</a>
     </div>
-    <p class="alt">Of <a href="#offerte" data-cta="offerte">vraag een offerte aan</a>, <a href="https://wa.me/31652361118" data-cta="whatsapp">app ons</a> of bel <a href="tel:+31652361118" data-cta="bellen">06 52 36 11 18</a>.</p>
+    <p class="alt">Weet je nog niet wat je wilt? <a href="https://stuntenmetplinten.nl/advies-aan-huis/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=slot" data-cta="advies">Advies aan huis</a> (€ 125 vooraf, gecrediteerd bij meer dan € 750 aan materiaalkosten).</p>
   </div>
 </section>
 <footer>Stunten met Plinten · Hoofddorp · KVK 34255311 · sinds 2006</footer>
 
-<nav class="bar" style="grid-template-columns:2fr 1fr 1fr">
-  <a href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=bar" style="background:var(--orange)" data-cta="mdf">MDF-plinten</a>
-  <a href="https://wa.me/31652361118" style="background:var(--green)" data-cta="whatsapp">WhatsApp</a>
-  <a href="tel:+31652361118" style="background:var(--ink)" data-cta="bellen">Bel</a>
+<nav class="bar" style="grid-template-columns:1fr">
+  <a href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=bar" style="background:var(--orange)" data-cta="mdf">Kies je plint en vraag je offerte aan</a>
 </nav>
 </body>
 </html>
