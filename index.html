@@ -58,18 +58,29 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .price img{width:260px;border-radius:6px}
 .price p{font-size:16px;max-width:520px;opacity:.9}
 .price b{color:#fff}
+/* projecten */
+.proj .wrap{max-width:1320px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pgrid figure{margin:0}.pgrid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;cursor:zoom-in}
+.pgrid figcaption{font-size:14px;color:var(--grey);margin-top:6px}
+.pmore{margin-top:12px}.pmore a{color:var(--slate);font-weight:700}
+#lb{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto}
+#lb::backdrop{background:rgba(0,0,0,.85)}
+#lb img{max-width:96vw;max-height:94vh;display:block;border-radius:4px}
+#lb button{position:fixed;top:10px;right:14px;font-size:34px;line-height:1;color:#fff;background:none;border:0;cursor:pointer}
 /* reviews */
-.revhead{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:10px;margin-bottom:16px}
-.revhead h2{margin:0}
-.revhead a{color:var(--slate);font-weight:700;font-size:14px}
-.revs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;list-style:none;padding:2px 2px 12px;margin:0 -2px;scrollbar-width:thin}
-.rev{flex:0 0 300px;scroll-snap-align:start;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fff;display:flex;flex-direction:column}
-.rev p{flex:1}
-.revall{margin-top:14px}.revall a{color:var(--slate);font-weight:700;font-size:15px}
-.rev .stars{font-size:13px}
-.rev p{font-size:15px;margin:4px 0 8px}
-.rev .n{font-weight:700;color:var(--slate);font-size:14px}
-.rev .n small{font-weight:400;color:#999}
+.revhead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.gsum{display:flex;gap:10px;align-items:center;font-size:14px;color:#3c4043}
+.gsum .big{font-size:22px;font-weight:700;color:#202124}.gsum .cnt{color:#70757a}
+.st{color:#fbbc04;letter-spacing:1px;font-size:14px}.st .off{color:#dadce0}
+.gbtn{border:1px solid #dadce0;border-radius:4px;padding:9px 14px;color:#1a73e8;font-weight:700;font-size:14px;text-decoration:none;background:#fff}
+.revs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;list-style:none;padding:0 0 10px;margin:0}
+.rev{flex:0 0 300px;scroll-snap-align:start;border:1px solid #dadce0;border-radius:8px;padding:14px 16px;background:#fff;font-family:Arial,sans-serif;color:#202124}
+.rh{display:flex;gap:10px;align-items:center;margin-bottom:6px}.rh>div{flex:1;min-width:0}
+.av{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#7b61ff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.nm{font-weight:700;font-size:14px}.rh time{font-size:12px;color:#70757a}
+.rev p{font-size:14px;line-height:1.5;margin:6px 0 0;white-space:pre-line}
+.revnote{font-size:13px;color:#70757a;margin-top:8px}.revnote a{color:#1a73e8}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
 .steps div{padding-left:40px;position:relative}
@@ -96,7 +107,22 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
  .bar{display:grid;grid-template-columns:2fr 1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:9;border-top:1px solid var(--line)}
  .bar a{padding:12px 6px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px}
 }
-@media(max-width:520px){.tiles{grid-template-columns:1fr;gap:14px}.list{grid-template-columns:1fr;gap:8px}.list div{padding:12px 14px}.prob,.sec,.why,.final{padding:34px 0}}
+@media(max-width:520px){
+ .prob,.sec,.why,.final{padding:26px 0}
+ .prob h2,.sec h2,.why h2{margin-bottom:12px}
+ .hero .dm{display:none}
+ .list{grid-template-columns:1fr 1fr;gap:8px}.list div{padding:10px 12px;font-size:14px}.list div b{font-size:14px}
+ .punch{font-size:16px;margin-top:12px}
+ .eric{grid-template-columns:88px 1fr;gap:14px;align-items:start}
+ .photo-eric{width:88px;height:88px}
+ .eric h2{font-size:19px;margin-bottom:6px}.eric p{font-size:15px;margin-bottom:0}
+ .stickers{display:none}
+ .tiles{grid-template-columns:1fr 1fr;gap:12px}.tiles h3{font-size:15px}.tiles p{font-size:13px}
+ .pgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -20px;padding:0 20px}
+ .pgrid figure{flex:0 0 88%;scroll-snap-align:center}
+ .steps div{padding-left:34px}.steps p{font-size:14px}
+ .rev{flex-basis:86%}
+}
 </style>
 </head>
 <body>
@@ -110,12 +136,12 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
   <div class="wrap">
     <span class="tag">Vloer erin. Plinten nog niet.</span>
     <h1>Nieuwe vloer, kale randen? Binnen een week liggen je plinten erin.</h1>
-    <p class="sub">Strakke MDF-plinten, vakkundig gelegd. Wij leveren, leggen en kitten, door heel Nederland en zonder voorrijkosten. Dan is je verbouwing eindelijk echt af.</p>
+    <p class="sub">Strakke MDF-plinten, vakkundig gelegd. Wij leveren, leggen en kitten, door heel Nederland en zonder voorrijkosten. <span class="dm">Dan is je verbouwing eindelijk echt af.</span></p>
     <div class="ctas">
       <a class="btn o" href="https://stuntenmetplinten.nl/mdf-plinten/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=plinten-af&amp;utm_content=hero" data-cta="mdf">Bekijk de MDF-plinten →</a>
     </div>
     <p class="alt">Liever eerst overleggen? <a href="#offerte" data-cta="offerte">Offerte aanvragen</a> · <a href="https://wa.me/31652361118?text=Hoi%20Eric%2C%20mijn%20vloer%20ligt%20erin%2C%20nu%20de%20plinten%20nog%E2%80%A6" data-cta="whatsapp">WhatsApp</a> · <a href="tel:+31652361118" data-cta="bellen">06 52 36 11 18</a></p>
-    <small><span class="stars">★★★★★</span> 4,9 uit 547 Google-reviews · sinds 2006</small>
+    <small><span class="stars">★★★★★</span> 4,9 uit 551 Google-reviews · sinds 2006</small>
   </div>
 </section>
 
@@ -156,28 +182,87 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
       <div><h3>Geen voorrijkosten</h3><p>Van Groningen tot Limburg. We komen gewoon.</p></div>
       <div><h3>Strak afgewerkt</h3><p>Ook de lastige hoeken. We gaan pas weg als alles strak gekit is.</p></div>
     </div>
-    <div class="price">
-      <img src="img/collage-afgeronde-projecten-in-beeld.webp" alt="Afgeronde projecten door Stunten met Plinten">
-      <p>Moderne MDF-plint 70x12 in RAL 9010, inclusief montage en afkitten. Je betaalt alleen de meters die we echt gebruiken.</p>
-    </div>
   </div>
 </section>
 
+<section class="sec proj">
+  <div class="wrap">
+    <h2>Afgerond werk</h2>
+    <div class="pgrid">
+      <figure><a href="img/projecten/moderne-plint-90x15-op-een-gietvloer-1800.webp" class="lbx"><img src="img/projecten/moderne-plint-90x15-op-een-gietvloer-900.webp" alt="Moderne plint 90x15 op een gietvloer" width="900" height="675" loading="lazy" decoding="async"></a><figcaption>Moderne plint 90x15 op een gietvloer</figcaption></figure>
+      <figure><a href="img/projecten/moderne-plint-in-moderne-inrichting-1800.webp" class="lbx"><img src="img/projecten/moderne-plint-in-moderne-inrichting-900.webp" alt="Moderne plint in moderne inrichting" width="900" height="675" loading="lazy" decoding="async"></a><figcaption>Moderne plint in moderne inrichting</figcaption></figure>
+      <figure><a href="img/projecten/plinten-langs-een-trap-1800.webp" class="lbx"><img src="img/projecten/plinten-langs-een-trap-900.webp" alt="Plinten langs een trap" width="900" height="675" loading="lazy" decoding="async"></a><figcaption>Plinten langs een trap</figcaption></figure>
+    </div>
+    <p class="pmore"><a href="https://stuntenmetplinten.nl/projecten-in-beeld-plinten/" target="_blank" rel="noopener">Meer projecten in beeld →</a></p>
+  </div>
+</section>
+<dialog id="lb" aria-label="Foto groot"><img alt=""><button type="button" aria-label="Sluiten">×</button></dialog>
+<script>
+(()=>{const d=document.getElementById('lb'),i=d.querySelector('img');
+document.querySelectorAll('a.lbx').forEach(a=>a.addEventListener('click',e=>{if(!d.showModal)return;e.preventDefault();i.src=a.href;i.alt=a.querySelector('img').alt;d.showModal()}));
+d.addEventListener('click',()=>d.close());})();
+</script>
+
 <section class="sec">
   <div class="wrap">
-    <div class="revhead"><h2>547 keer gemiddeld <span class="stars">4,9★</span></h2></div>
-    <ul class="revs" aria-label="Google-reviews, scroll horizontaal">
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Goede communicatie, nette service en afspraken nagekomen! Zeker aanbevolen!"</p><div class="n">Judith Postmus <small>· Google · 25 okt 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"De monteurs zijn klantvriendelijk en hebben gedegen werk afgeleverd. Zeer tevreden"</p><div class="n">Rob van Marle <small>· Google · 21 okt 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Prima geholpen! Peter en Eric hebben goed werk afgeleverd."</p><div class="n">jan pieter schaap <small>· Google · 19 okt 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Goed en snel geplaatst. Mannen denken fijn mee. Vriendelijk in contact. Onze muur een stuk mooier geworden met de sierlijsten, bedankt!"</p><div class="n">Jeffrey Steevens <small>· Google · 14 okt 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Deze mannen hebben puik werk geleverd! Ze werken snel en zorgvuldig, zijn uitermate vakkundig en erg prettig in de omgang. …"</p><div class="n">Gerard Visser <small>· Google · 7 okt 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Heel blij met de plinten die door onze hele woning zijn geplaatst. Prettige communicatie, denken met je mee, vlot en vakkundig gelegd. Absoluut een aanrader."</p><div class="n">Astrid Maas <small>· Google · 24 sep 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Snelle reactie bij de offerte aanvraag. Eric is een fijn persoon om mee te communiceren en het plaatsten van de plinten erg mooi. Ik ben super blij met het eind resultaat! Bedankt."</p><div class="n">Daphne Hoogland <small>· Google · 21 sep 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Aardige gast Eric en mooi alle plinten gelegd. Mijn woonkamer zit vol met hoeken en deze zijn allemaal mooi gelegd! Erg blij mee :)"</p><div class="n">Dave H <small>· Google · 13 sep 2026</small></div></li>
-      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Mooi op tijd, snel gewerkt. Heel aardig en een prachtig resultaat!"</p><div class="n">Eleonore Lamberty <small>· Google · 11 sep 2026</small></div></li>
+    <div class="revhead">
+      <div class="gsum"><svg class="g" viewBox="0 0 48 48" width="28" height="28" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg><div><b>Google-reviews</b><br><span class="big">4,9</span> <span class="st" aria-hidden="true">★★★★★</span> <span class="cnt">551 reviews</span></div></div>
+      <a class="gbtn" href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" data-cta="google-reviews">Bekijk alle reviews op Google</a>
+    </div>
+    <ul class="revs" aria-label="Recente Google-reviews, scroll horizontaal">
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/judith-postmus.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Judith Postmus</div><time datetime="2026-10-25">25 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Goede communicatie, nette service en afspraken nagekomen! Zeker aanbevolen!</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/rob-van-marle.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Rob van Marle</div><time datetime="2026-10-21">21 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="4 van 5 sterren">★★★★<span class="off">★</span></span>
+        <p>De monteurs zijn klantvriendelijk en hebben gedegen werk afgeleverd.
+Zeer tevreden</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/jan-pieter-schaap.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">jan pieter schaap</div><time datetime="2026-10-19">19 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="4 van 5 sterren">★★★★<span class="off">★</span></span>
+        <p>Prima geholpen! Peter en Eric hebben goed werk afgeleverd.</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/jeffrey-steevens.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Jeffrey Steevens</div><time datetime="2026-10-14">14 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Goed en snel geplaatst. Mannen denken fijn mee. Vriendelijk in contact. Onze muur een stuk mooier geworden met de sierlijsten, bedankt!</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/gerard-visser.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Gerard Visser</div><time datetime="2026-10-07">7 oktober 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Deze mannen hebben puik werk geleverd! Ze werken snel en zorgvuldig, zijn uitermate vakkundig en erg prettig in de omgang. Service staat hoog in 't vaandel; ze komen nog een keer terug om één ontbrekende kroonlijst te monteren. Kortom: een aanrader!</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/hans-puttenstein.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Hans Puttenstein</div><time datetime="2026-09-30">30 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Peter &amp; Eric werken snel en efficiënt, denken mee en komen afspraken na. En dat voor een prima en scherpe prijsstelling. Stunten met plinten is zondermeer aan te bevelen 👍👌</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/astrid-maas.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Astrid Maas</div><time datetime="2026-09-24">24 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Heel blij met de plinten die door onze hele woning zijn geplaatst. Prettige communicatie, denken met je mee, vlot en vakkundig gelegd.  Absoluut een aanrader.</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/daphne-hoogland.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Daphne Hoogland</div><time datetime="2026-09-21">21 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Snelle reactie bij de offerte aanvraag. Eric is een fijn persoon om mee te communiceren en het plaatsten van de plinten erg mooi. Ik ben super blij met het eind resultaat! Bedankt.</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/dave-h.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Dave H</div><time datetime="2026-09-13">13 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Aardige gast Eric en mooi alle plinten gelegd. Mijn woonkamer zit vol met hoeken en deze zijn allemaal mooi gelegd! Erg blij mee :)</p>
+      </li>
+      <li class="rev">
+        <div class="rh"><img class="av" src="img/reviews/eleonore-lamberty.webp" width="40" height="40" alt="" loading="lazy"><div><div class="nm">Eleonore Lamberty</div><time datetime="2026-09-11">11 september 2026</time></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" title="Bekijk op Google"><svg class="g" viewBox="0 0 48 48" width="16" height="16" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></a></div>
+        <span class="st" aria-label="5 van 5 sterren">★★★★★<span class="off"></span></span>
+        <p>Mooi op tijd, snel gewerkt. Heel aardig en een prachtig resultaat!</p>
+      </li>
     </ul>
-    <p class="revall"><a href="https://www.google.com/maps/search/?api=1&amp;query=Stunten%20met%20Plinten%20Hoofddorp&amp;query_place_id=ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" data-cta="google-reviews">Bekijk alle reviews op Google →</a></p>
+    <p class="revnote">De 10 meest recente reviews, letterlijk overgenomen van Google. <a href="https://www.google.com/maps/place/?q=place_id:ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener">Bekijk alle reviews op Google</a></p>
   </div>
 </section>
 
