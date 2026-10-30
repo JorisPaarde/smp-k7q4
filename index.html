@@ -62,8 +62,10 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .revhead{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:10px;margin-bottom:16px}
 .revhead h2{margin:0}
 .revhead a{color:var(--slate);font-weight:700;font-size:14px}
-.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.rev{border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.revs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;list-style:none;padding:2px 2px 12px;margin:0 -2px;scrollbar-width:thin}
+.rev{flex:0 0 300px;scroll-snap-align:start;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fff;display:flex;flex-direction:column}
+.rev p{flex:1}
+.revall{margin-top:14px}.revall a{color:var(--slate);font-weight:700;font-size:15px}
 .rev .stars{font-size:13px}
 .rev p{font-size:15px;margin:4px 0 8px}
 .rev .n{font-weight:700;color:var(--slate);font-size:14px}
@@ -83,7 +85,7 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 .bar{display:none}
 @media(max-width:860px){
- .list,.tiles{grid-template-columns:1fr 1fr}.revs,.steps{grid-template-columns:1fr}
+ .list,.tiles{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.rev{flex-basis:82%}
  .steps{gap:14px}
  .eric{grid-template-columns:1fr;gap:20px}.photo{max-width:200px}.photo-eric{width:180px;height:180px}
  .hero{min-height:0;background-position:70% center}
@@ -163,13 +165,19 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 
 <section class="sec">
   <div class="wrap">
-    <div class="revhead"><h2>547 keer gemiddeld <span class="stars">4,9★</span></h2><a href="https://stuntenmetplinten.nl/" target="_blank">Alle reviews op Google →</a></div>
-    <div class="revs">
-      <div class="rev"><span class="stars">★★★★★</span><p>"Aardige gast Eric en mooi alle plinten gelegd. Mijn woonkamer zit vol met hoeken en deze zijn allemaal mooi gelegd! Erg blij mee :)"</p><div class="n">Dave H <small>· Google</small></div></div>
-      <div class="rev"><span class="stars">★★★★★</span><p>"Goed, snel en netjes geholpen, plaatsing was al binnen een week!! Peter en Eric waren optijd op locatie, vriendelijk en vol humor"</p><div class="n">Niels en xandra <small>· stuntenmetplinten.nl/reviews</small></div></div>
-      <div class="rev"><span class="stars">★★★★★</span><p>"Snelle reactie bij de offerte aanvraag. Eric is een fijn persoon om mee te communiceren en het plaatsten van de plinten erg mooi. Ik ben super blij met het eind resultaat! Bedankt."</p><div class="n">Daphne Hoogland <small>· Google</small></div></div>
-      <div class="rev"><span class="stars">★★★★★</span><p>"Hele huis voorzien van mooie plinten! Afwerking is top! Communicatie gaat makkelijk en snel! Na aanvraag van de offerte zijn de plinten binnen een week geplaatst! Zeker aan te raden!"</p><div class="n">Kirsten <small>· stuntenmetplinten.nl/reviews</small></div></div>
-    </div>
+    <div class="revhead"><h2>547 keer gemiddeld <span class="stars">4,9★</span></h2></div>
+    <ul class="revs" aria-label="Google-reviews, scroll horizontaal">
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Goede communicatie, nette service en afspraken nagekomen! Zeker aanbevolen!"</p><div class="n">Judith Postmus <small>· Google · 25 okt 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"De monteurs zijn klantvriendelijk en hebben gedegen werk afgeleverd. Zeer tevreden"</p><div class="n">Rob van Marle <small>· Google · 21 okt 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Prima geholpen! Peter en Eric hebben goed werk afgeleverd."</p><div class="n">jan pieter schaap <small>· Google · 19 okt 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Goed en snel geplaatst. Mannen denken fijn mee. Vriendelijk in contact. Onze muur een stuk mooier geworden met de sierlijsten, bedankt!"</p><div class="n">Jeffrey Steevens <small>· Google · 14 okt 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Deze mannen hebben puik werk geleverd! Ze werken snel en zorgvuldig, zijn uitermate vakkundig en erg prettig in de omgang. …"</p><div class="n">Gerard Visser <small>· Google · 7 okt 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Heel blij met de plinten die door onze hele woning zijn geplaatst. Prettige communicatie, denken met je mee, vlot en vakkundig gelegd. Absoluut een aanrader."</p><div class="n">Astrid Maas <small>· Google · 24 sep 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Snelle reactie bij de offerte aanvraag. Eric is een fijn persoon om mee te communiceren en het plaatsten van de plinten erg mooi. Ik ben super blij met het eind resultaat! Bedankt."</p><div class="n">Daphne Hoogland <small>· Google · 21 sep 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Aardige gast Eric en mooi alle plinten gelegd. Mijn woonkamer zit vol met hoeken en deze zijn allemaal mooi gelegd! Erg blij mee :)"</p><div class="n">Dave H <small>· Google · 13 sep 2026</small></div></li>
+      <li class="rev"><span class="stars" aria-label="5 van 5 sterren">★★★★★</span><p>"Mooi op tijd, snel gewerkt. Heel aardig en een prachtig resultaat!"</p><div class="n">Eleonore Lamberty <small>· Google · 11 sep 2026</small></div></li>
+    </ul>
+    <p class="revall"><a href="https://www.google.com/maps/search/?api=1&amp;query=Stunten%20met%20Plinten%20Hoofddorp&amp;query_place_id=ChIJHxSU9b_nxUcRyCi1d3opWqw" target="_blank" rel="noopener" data-cta="google-reviews">Bekijk alle reviews op Google →</a></p>
   </div>
 </section>
 
