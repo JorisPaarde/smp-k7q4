@@ -45,6 +45,7 @@ header.top a.tel{color:var(--ink);text-decoration:none;font-weight:700;font-size
 .photo{aspect-ratio:4/5;border-radius:8px;background:#eef1f3;border:1px dashed #b8c4c8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--slate);padding:16px;font-size:14px}
 .photo span{font-size:34px;opacity:.6}
 .photo .hi{display:none}
+.photo-eric{display:block;width:240px;height:240px;border-radius:50%;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .eric p{font-size:16px;color:var(--grey);margin-bottom:14px;max-width:600px}
 .stickers{display:flex;flex-wrap:wrap;gap:8px}
 .stickers span{background:var(--soft);border:1px solid var(--line);color:var(--grey);padding:5px 11px;border-radius:20px;font-size:13px}
@@ -84,7 +85,7 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 @media(max-width:860px){
  .list,.tiles{grid-template-columns:1fr 1fr}.revs,.steps{grid-template-columns:1fr}
  .steps{gap:14px}
- .eric{grid-template-columns:1fr;gap:20px}.photo{max-width:200px}
+ .eric{grid-template-columns:1fr;gap:20px}.photo{max-width:200px}.photo-eric{width:180px;height:180px}
  .hero{min-height:0;background-position:70% center}
  .hero:before{background:linear-gradient(180deg,rgba(17,35,55,.75),rgba(17,35,55,.88))}
  .hero .wrap{padding-top:36px;padding-bottom:36px}
@@ -131,7 +132,7 @@ footer{text-align:center;font-size:12px;color:#999;padding:18px 20px 80px}
 
 <section class="sec">
   <div class="wrap eric">
-    <div class="photo"><span>📷</span><b>FOTO ERIC</b><br>(en Peter?) volgt</div>
+    <img class="photo-eric" src="img/eric-salomons.webp" width="400" height="400" alt="Eric Salomons, eigenaar van Stunten met Plinten" loading="lazy" decoding="async">
     <div>
       <h2>Dit is Eric. Hij komt je plinten afmaken.</h2>
       <p>Wij leggen al sinds 2006 plinten. Eric komt samen met Peter bij je langs, denkt mee over die lastige hoeken en gaat pas weg als alles strak gekit is. Koffie lust hij altijd.</p>
